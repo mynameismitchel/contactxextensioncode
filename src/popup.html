@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact-X</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Contact<span class="accent">-X</span></h1>
+      <div id="auth-status" class="auth-loading">
+        <div class="spinner"></div>
+        <span>Authenticating...</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="main-content" class="hidden">
+        <div class="lead-info">
+          <h2 id="lead-name">No Lead Scraped</h2>
+          <p id="lead-title">Please visit a LinkedIn profile.</p>
+        </div>
+        <button id="save-lead-btn" class="glow-btn">
+          <span>Save Lead</span>
+        </button>
+      </div>
+
+      <div id="login-content" class="hidden">
+        <p>Please log in to your Contact-X dashboard to save leads.</p>
+        <button id="open-dashboard-btn" class="glow-btn">
+          <span>Open Dashboard</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

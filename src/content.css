@@ -1,0 +1,80 @@
+/* src/content.css */
+.contactx-floating {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+  cursor: move;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+.contactx-floating:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(102, 126, 234, 0.7);
+}
+.contactx-icon-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactx-icon-text {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.contactx-checkmark {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  animation: checkmarkPop 0.5s ease;
+}
+@keyframes checkmarkPop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.contactx-saving {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.contactx-saved {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+}
+.contactx-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000000;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.3s ease;
+}
+.contactx-notification-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.contactx-notification-error {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+.contactx-notification-success {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+}
